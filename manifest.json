@@ -1,0 +1,20 @@
+﻿{
+    "manifest_version": 2,
+    "name": "Ykt+",
+    "version": "1.0",
+    "description": "Добавляет к Ykt.Ru улучшения",
+    "icons": {
+        "48": "images/logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "http://joker.ykt.ru/*", "http://news.ykt.ru/*" ],
+			"css": [ "jgrowl.css", "style.css" ],
+            "js": [ "jquery.js", "scrollTo.js", "jgrowl.js", "script.js" ]
+        }
+    ],
+    "web_accessible_resources": [
+        "images/ajax-loader.gif",
+	"jquery.jgrowl.map"
+    ]
+}
