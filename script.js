@@ -10,6 +10,7 @@ function startFeatures() {
 
 function startNewsFeatures() {
     removeSocialWidgets();
+    resizeImages();
     markBadComments();
 }
 
@@ -29,6 +30,13 @@ function markBadComments() {
         if ($(".plusminus", $(this)).hasClass("negative")) {
             $(".body", $(this)).addClass("plus-bad");
         }
+    });
+}
+
+function resizeImages() {
+    $("img", $(".comment-img")).each(function () {
+        if ($(this).width() > $(this).height())
+            $(this).height("100%");
     });
 }
 
