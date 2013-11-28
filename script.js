@@ -21,7 +21,8 @@ function startJokerFeatures() {
 }
 
 function removeSocialWidgets() {
-    $(".fb_iframe_widget").parent().remove();
+    $("#facebook-jssdk").remove();
+    $(".fb_iframe_widget").remove();
     $("#vk_groups").remove();
 }
 
